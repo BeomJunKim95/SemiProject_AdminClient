@@ -1,0 +1,289 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2C10D1D1-8FE9-411E-8CB2-D3FF21708E82}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>AdminClient</RootNamespace>
+    <AssemblyName>AdminClient</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ManagerForm\PopUp\EmpGroupAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerForm\PopUp\EmpGroupAdd.Designer.cs">
+      <DependentUpon>EmpGroupAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerForm\PopUp\frmSearchAddr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerForm\PopUp\frmSearchAddr.designer.cs">
+      <DependentUpon>frmSearchAddr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerForm\PopUp\ProductPopUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerForm\PopUp\ProductPopUp.Designer.cs">
+      <DependentUpon>ProductPopUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Service\BOMService.cs" />
+    <Compile Include="Service\ComboService.cs" />
+    <Compile Include="Service\Common_Service.cs" />
+    <Compile Include="Service\CompanyService.cs" />
+    <Compile Include="Service\DivitionService.cs" />
+    <Compile Include="Service\EmpGroupConnService.cs" />
+    <Compile Include="Service\FeatureService.cs" />
+    <Compile Include="Service\GroupAuthority_Service.cs" />
+    <Compile Include="Service\GroupInfo_Service.cs" />
+    <Compile Include="Service\Order_Service.cs" />
+    <Compile Include="Service\Purchase_Service.cs" />
+    <Compile Include="Start\Class1.cs" />
+    <Compile Include="Start\Common_Manager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Start\Common_Manager.Designer.cs">
+      <DependentUpon>Common_Manager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Start\FromInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Start\FromInfo.Designer.cs">
+      <DependentUpon>FromInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Global\Global.cs" />
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Start\GroupInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Start\GroupInfo.Designer.cs">
+      <DependentUpon>GroupInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Start\ProductForProp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Start\ProductForProp.Designer.cs">
+      <DependentUpon>ProductForProp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Start\ProductInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Start\ProductInfo.Designer.cs">
+      <DependentUpon>ProductInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Start\SendProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Start\SendProduct.Designer.cs">
+      <DependentUpon>SendProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Start\Test\Company_Manager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Start\Test\Company_Manager.Designer.cs">
+      <DependentUpon>Company_Manager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Start\Test\Employee_Manager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Start\Test\Employee_Manager.Designer.cs">
+      <DependentUpon>Employee_Manager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Start\Test\Order_Manager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Start\Test\Order_Manager.Designer.cs">
+      <DependentUpon>Order_Manager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerForm\Product\BOMSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerForm\Product\BOMSet.Designer.cs">
+      <DependentUpon>BOMSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerForm\Product\Product_SearchAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerForm\Product\Product_SearchAdd.Designer.cs">
+      <DependentUpon>Product_SearchAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDI\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDI\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service\Address_Service.cs" />
+    <Compile Include="Service\Categories_Service.cs" />
+    <Compile Include="Service\EmployeesService.cs" />
+    <Compile Include="Service\FormInfoService.cs" />
+    <Compile Include="Service\Product_Service.cs" />
+    <Compile Include="Service\User_Service.cs" />
+    <Compile Include="Service\Valuez_Service.cs" />
+    <Compile Include="Start\Test\whmanagertest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Start\Test\whmanagertest.Designer.cs">
+      <DependentUpon>whmanagertest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucTabControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ucTabControl.Designer.cs">
+      <DependentUpon>ucTabControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\ProductFeature.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\ProductFeature.Designer.cs">
+      <DependentUpon>ProductFeature.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\CommonUtil.cs" />
+    <Compile Include="Utils\CuttedGroup.cs" />
+    <Compile Include="Utils\Email.cs" />
+    <Compile Include="Utils\ExtenstionMethod.cs" />
+    <Compile Include="Utils\UtileHelper.cs" />
+    <Compile Include="Utils\UtilEvent.cs" />
+    <EmbeddedResource Include="ManagerForm\PopUp\EmpGroupAdd.resx">
+      <DependentUpon>EmpGroupAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerForm\PopUp\frmSearchAddr.resx">
+      <DependentUpon>frmSearchAddr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerForm\PopUp\ProductPopUp.resx">
+      <DependentUpon>ProductPopUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Start\Common_Manager.resx">
+      <DependentUpon>Common_Manager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Start\FromInfo.resx">
+      <DependentUpon>FromInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Start\GroupInfo.resx">
+      <DependentUpon>GroupInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Start\ProductForProp.resx">
+      <DependentUpon>ProductForProp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Start\ProductInfo.resx">
+      <DependentUpon>ProductInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Start\SendProduct.resx">
+      <DependentUpon>SendProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Start\Test\Company_Manager.resx">
+      <DependentUpon>Company_Manager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Start\Test\Employee_Manager.resx">
+      <DependentUpon>Employee_Manager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Start\Test\Order_Manager.resx">
+      <DependentUpon>Order_Manager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerForm\Product\BOMSet.resx">
+      <DependentUpon>BOMSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerForm\Product\Product_SearchAdd.resx">
+      <DependentUpon>Product_SearchAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDI\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Start\Test\whmanagertest.resx">
+      <DependentUpon>whmanagertest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\ProductFeature.resx">
+      <DependentUpon>ProductFeature.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AdminClientDAC\AdminClientDAC.csproj">
+      <Project>{f1a198c3-07fc-4e6c-8acd-c61a80a9c393}</Project>
+      <Name>AdminClientDAC</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AdminClientVO\AdminClientVO.csproj">
+      <Project>{3927cb73-dbb7-4402-8b0b-197dbfe9fb75}</Project>
+      <Name>AdminClientVO</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="CustomControl\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close-grey.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close-red.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
